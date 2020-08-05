@@ -1,0 +1,296 @@
+.App {
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.Section {
+  grid-column-start: 4;
+  grid-column-end: 10;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.Header,
+.Follow {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Follow {
+  grid-column-start: 10;
+  grid-column-end: 13;
+  margin-top: -240vh;
+  background-color: transparent;
+}
+.img {
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: icon 40s infinite linear;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  opacity: 0.7;
+}
+@keyframes icon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.navLinks {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 4vh;
+  font-size: small;
+}
+a {
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  color: rgb(110, 110, 110);
+}
+a:hover {
+  color: blue;
+}
+.name {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+}
+.FollowLinks,
+.HeaderLinks {
+  position: fixed;
+}
+.HeaderLinks {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 20px;
+  opacity: 0.2;
+  transition-duration: 300ms;
+  filter: grayscale(80%);
+}
+.icon:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  filter: grayscale(0%);
+}
+.About,
+.Schedule,
+.Skills,
+.Contact {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, fr);
+}
+.Contact {
+  border-bottom: 1px solid transparent;
+}
+.labelAbout,
+.labelSchedule,
+.daysSchedule,
+.hourSchedule,
+.codeSchedule,
+.SkillsLabel,
+.labelContact {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: blue;
+}
+.SkillsLabel,
+.labelAbout,
+.labelContact,
+.labelSchedule {
+  align-items: center;
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 6vh;
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+.paragraphAbout {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-size: small;
+  line-height: 3vh;
+}
+.daysSchedule {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  color: rgb(110, 110, 110);
+}
+.days,
+.hour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: small;
+}
+.days:hover {
+  color: blue;
+}
+.codeSchedule {
+  border-top: 1px solid rgb(240, 240, 240);
+  grid-row-start: 3;
+  grid-row-end: 7;
+  align-items: center;
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+.html,
+.js,
+.css {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+.js {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.css {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+.htmlbar,
+.jsbar,
+.cssbar {
+  width: 80%;
+  background-color: rgb(249, 249, 249);
+  border: 1px solid rgb(240, 240, 240);
+  height: 20px;
+  margin-top: 3vh;
+  border-radius: 10px;
+}
+.htmlprogress,
+.jsprogress,
+.cssprogress {
+  background-color: rgb(253, 253, 253);
+  height: 100%;
+  border-right: 1px solid rgb(240, 240, 240);
+  border-radius: 9px;
+}
+.nameContact,
+.emailContact,
+.Message,
+.submitContact {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: 1px solid transparent;
+  border-bottom: 1px solid rgb(240, 240, 240);
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: small;
+  background-color: rgb(253, 253, 253);
+}
+.emailContact {
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.Message {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  padding: 3vh;
+}
+.nameContact::placeholder,
+.emailContact::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  color: rgb(220, 220, 220);
+}
+.Message::placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  color: rgb(220, 220, 220);
+}
+.submitContact {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 6;
+  grid-row-end: 7;
+  border: 1px solid transparent;
+  background-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 6vh;
+}
+.submitContact:hover {
+  color: blue;
+  border: 1px solid rgb(240, 240, 240);
+  transition-duration: 300ms;
+  box-shadow: 0px 0px 8px 5px rgba(236, 236, 236, 0.3);
+}
